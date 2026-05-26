@@ -1,9 +1,16 @@
 import React from 'react';
 
-const TodoItem: React.FC = () =>{
+interface TodoItemProps{
+    title: string;
+
+}
+const TodoItem: React.FC<TodoItemProps> = (props) =>{
+
     return (
         <li>
-            Code
+            {
+                props.title
+            }
         </li>
     )
 }
